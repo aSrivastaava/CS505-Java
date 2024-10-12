@@ -102,7 +102,7 @@ public class CoinsCalc {
 		// Calculation for nickels
 		// using ternary operator to calculate and assign the result
 		// only if the result is greater than 0.
-		dime = ((remainginAmount / 5) > 0) ? (remainginAmount / 5) : 0;
+		nickels = ((remainginAmount / 5) > 0) ? (remainginAmount / 5) : 0;
 		remainginAmount %= 5;
 		System.out.println(nickels + " Nickels");
 
