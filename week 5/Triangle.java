@@ -10,6 +10,15 @@ public class Triangle {
         side3 = tiangleSide3;
     }
 
+    boolean isTriangle(int tiangleSide1, int tiangleSide2, int tiangleSide3) {
+        if ((tiangleSide1 + tiangleSide2) > tiangleSide3 && (tiangleSide1 + tiangleSide3) > tiangleSide2
+                && (tiangleSide2 + tiangleSide3) > tiangleSide1) {
+            return true;
+        }
+
+        return false;
+    }
+
     boolean isScalene() {
         if (side1 != side2 && side1 != side3 && side3 != side2) {
             return true;

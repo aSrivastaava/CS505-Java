@@ -20,11 +20,15 @@ public class TriangleCalculation {
 
         scan.close();
 
-        tri.setSides(side1, side2, side3);
+        if (tri.isTriangle(side1, side2, side3)) {
+            tri.setSides(side1, side2, side3);
 
-        System.out.println("Scalene: " + tri.isScalene());
-        System.out.println("Isosceles: " + tri.isIsosceles());
-        System.out.println("Equilateral: " + tri.isEquilateral());
-        System.out.println("Perimeter: " + tri.calculatePerimeter());
+            System.out.println("No sides are equal - Scalene: " + tri.isScalene());
+            System.out.println("Any two sides are equal - Isosceles: " + tri.isIsosceles());
+            System.out.println("All three sides are equal - Equilateral: " + tri.isEquilateral());
+            System.out.println("Perimeter: " + tri.calculatePerimeter());
+        } else {
+            System.out.println("Invalid Triangle...! Please enter a valid sides for a triangle.");
+        }
     }
 }
