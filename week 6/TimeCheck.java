@@ -13,7 +13,7 @@ public class TimeCheck {
 
         // Second instance
         Time t2 = new Time(19, 26, 0);
-        System.out.println("\nInitial Time:");
+        System.out.println("Initial Time:");
         t2.printTime();
 
         // Increment by 3600 seconds
@@ -25,7 +25,7 @@ public class TimeCheck {
 
         // Third instance
         Time t3 = new Time(23, 26, 0);
-        System.out.println("\nInitial Time:");
+        System.out.println("Initial Time:");
         t3.printTime();
 
         // Increment by 86400 seconds
@@ -34,6 +34,5 @@ public class TimeCheck {
         }
         System.out.println("After 24 hours:");
         t3.printTime();
-
     }
 }
