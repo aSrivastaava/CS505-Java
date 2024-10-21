@@ -10,15 +10,16 @@ public class Time {
     }
 
     public Time(int hr, int min, int sec) {
-        hour = hr;
-        minute = min;
-        second = sec;
+        setTime(hr, min, sec);
     }
 
     public void setTime(int hr, int min, int sec) {
-        hour = hr;
-        minute = min;
-        second = sec;
+        if (hr >= 0 && hr < 24)
+            hour = hr;
+        if (min >= 0 && min < 60)
+            minute = min;
+        if (sec >= 0 && sec < 60)
+            second = sec;
     }
 
     public void printTime() {
@@ -26,25 +27,17 @@ public class Time {
     }
 
     public void tick() {
-        // tick method defined
-        if (second < 60)
-            second++;
-        else {
-            if (minute < 60) {
-                second = 0;
-                minute++;
-            } else {
-                if (hour < 24) {
-                    second = 0;
-                    minute = 0;
-                    hour++;
-                } else {
-                    second = 0;
-                    minute = 0;
+        second++;
+        if (second >= 60) {
+            second = 0;
+            minute++;
+            if (minute >= 60) {
+                minute = 0;
+                hour++;
+                if (hour >= 24) {
                     hour = 0;
                 }
             }
         }
-
     }
 }
