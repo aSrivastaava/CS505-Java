@@ -17,6 +17,12 @@ public class Array {
 
         double average = calcAvg(myArray);
         System.out.println("Average of the given array is " + average);
+
+        int a = 100;
+        int b = 1;
+
+        System.out.println("A hashcode: " + Integer.hashCode(a));
+        System.out.println("B hashcode: " + Integer.hashCode(a));
     }
 
 }
