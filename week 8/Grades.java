@@ -1,16 +1,18 @@
 class Grades {
 
-    private int[] values;
+    private int[] values = {};
 
     Grades() {
     };
 
     Grades(int[] myArray) {
-
+        if (myArray != null)
+            setValues(myArray);
     };
 
     public void setValues(int[] myArray) {
-
+        if (myArray != null)
+            values = myArray;
     }
 
     public int[] getValues() {
@@ -78,11 +80,6 @@ class Grades {
         }
 
         for (int i = 0; i < valuesCount.length; i++) {
-            // 90 – 100 | ****
-            // 80 – 89 | **********
-            // 70 – 79 | ********
-            // 60 – 69 | ****
-            // < 60 | **
             if (i == 0)
                 System.out.print("90 - 100 \t|\t");
             else if (i == 1)
