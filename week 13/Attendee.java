@@ -41,4 +41,12 @@ public class Attendee {
         Collections.sort(attendance);
     }
 
+    public void printAttendance() {
+        getAttendanceArray();
+        sortAttendance();
+        for (int i = 0; i < attendance.size(); i++) {
+            System.out.println(attendance.get(i));
+        }
+    }
+
 }
