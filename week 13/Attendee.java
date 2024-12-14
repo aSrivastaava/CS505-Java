@@ -49,4 +49,18 @@ public class Attendee {
         }
     }
 
+    public void histogram() {
+        int index = 0;
+
+        System.out.print(attendance.get(index).company + "\t");
+        for (int i = 0; i < attendance.size(); i++) {
+            if (attendance.get(index).company.equals(attendance.get(i).company)) {
+                System.out.print("*");
+            } else {
+                index = i;
+                System.out.print("\n" + attendance.get(index).company + "\t" + "*");
+            }
+        }
+
+    }
 }
