@@ -63,4 +63,34 @@ public class Attendee {
         }
 
     }
+
+    private String[] capitalFirstChar(String[] str) {
+        if (str == null || str.length == 0) {
+            return str;
+        } else {
+            for (int i = 0; i < str.length; i++) {
+                str[i] = str[i].substring(0, 1).toUpperCase() + str[i].substring(1).toLowerCase();
+            }
+
+            return str;
+        }
+    }
+
+    public void checkAttendance(String name) {
+        boolean found = false;
+        String[] fullName = name.split("\\.");
+        fullName = capitalFirstChar(fullName);
+
+        for (int i = 0; i < attendance.size(); i++) {
+            if (attendance.get(i).name.equals(name)) {
+                found = true;
+            }
+        }
+
+        if (found) {
+            System.out.println(fullName[0] + " " + fullName[1] + " attended conference.");
+        } else {
+            System.out.println(fullName[0] + " " + fullName[1] + " not attended conference.");
+        }
+    }
 }
