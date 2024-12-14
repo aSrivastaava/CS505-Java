@@ -6,11 +6,15 @@ public class AttendeeTest {
         at.printAttendance();
 
         System.out.println("\n\nHistogram");
-        at.histogram();
+        at.printHistogram();
 
         System.out.println("\n\nCheck Attendance");
         at.checkAttendance("bill.gates");
         at.checkAttendance("aditya.srivastava");
+
+        String[] name = { "bill.gates", "aditya.srivastava" };
+
+        at.exportToFile(name);
 
     }
 }
