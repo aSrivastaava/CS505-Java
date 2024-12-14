@@ -37,4 +37,8 @@ public class Attendee {
 
     }
 
+    private void sortAttendance() {
+        Collections.sort(attendance);
+    }
+
 }
